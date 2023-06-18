@@ -1,17 +1,12 @@
 import requests
 
 from django.shortcuts import render
-from django.http import JsonResponse
 
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 
-from example.models import Post, Vulnerability
-from example.api.serializers import PostSerializer, VulnerabilitySerializer
-
-class PostApiViewSet(ModelViewSet):
-    serializer_class = PostSerializer
-    queryset = Post.objects.all()
+from example.models import Vulnerability
+from example.api.serializers import VulnerabilitySerializer
 
 class VulnerabilityApiViewSet(ModelViewSet):
     serializer_class = VulnerabilitySerializer

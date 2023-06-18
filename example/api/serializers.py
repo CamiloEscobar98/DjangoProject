@@ -1,11 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from example.models import Post, Vulnerability
-
-
-class PostSerializer(ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ['id', 'title', 'content']
+from example.models import Vulnerability
 
 class VulnerabilitySerializer(ModelSerializer):
     class Meta:

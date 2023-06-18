@@ -1,7 +1,7 @@
 from django.contrib import admin
-from example.models import Post
+from example.models import Vulnerability
 
-@admin.register(Post)
+@admin.register(Vulnerability)
 # Register your models here.
-class PostAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title']
+class VulnerabilityAdmin(admin.ModelAdmin):
+    list_display = ['id', 'code']
