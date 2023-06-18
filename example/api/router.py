@@ -1,6 +1,7 @@
 from rest_framework.routers import DefaultRouter
-from example.api.views import PostApiViewSet
+from example.api.views import PostApiViewSet, VulnerabilityApiViewSet
 
-router_posts = DefaultRouter()
+router = DefaultRouter()
 
-router_posts.register(prefix='posts', basename='posts', viewset=PostApiViewSet)
+router.register(prefix='posts', basename='posts', viewset=PostApiViewSet)
+router.register(prefix='vulnerabilities', basename='vulnerabilities', viewset=VulnerabilityApiViewSet)
