@@ -1,5 +1,17 @@
 # INFORMACIÓN: PRUEBA TÉCNICA PYTHON DJANGO REST FRAMEWORK
 
+##  Instalación:
+1. Construir la imágen de Docker.
+```
+docker build -t python-django-test .
+```
+2. Ejecutar el contenedor Docker.
+```
+docker run -p 8000:8000 docker-django-test
+```
+3. Abrir la aplicación en localhost:8000
+
+
 ## Rutas API:
 - localhost:8000/api/get-token (POST) **Obtener el token necesario para poder acceder a los otros endpoints de la aplicación. Es necesario colocar el username y passwor del usuario. Este token será utilizado por medio de un Header Authorization con el valor "Token {token}"**
 **Response**
