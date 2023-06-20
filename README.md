@@ -13,7 +13,7 @@ docker run -p 8000:8000 docker-django-test
 
 
 ## Rutas API:
-- localhost:8000/api/get-token (POST) **Obtener el token necesario para poder acceder a los otros endpoints de la aplicación. Es necesario colocar el username y passwor del usuario. Este token será utilizado por medio de un Header Authorization con el valor "Token {token}"**
+- localhost:8000/api/get-token (POST) **Obtener el token necesario para poder acceder a los otros endpoints de la aplicación. Es necesario colocar el username y password del usuario. Este token será utilizado por medio de un Header Authorization con el valor "Token {token}"**
 **Response**
 ```
 HTTP 200 OK
