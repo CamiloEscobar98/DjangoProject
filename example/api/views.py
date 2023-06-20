@@ -1,7 +1,7 @@
 import requests
 
 from rest_framework.viewsets import ModelViewSet
-from rest_framework import filters
+from rest_framework import authentication, permissions
 from rest_framework.response import Response
 from rest_framework.decorators import action
 
@@ -11,6 +11,9 @@ from example.api.serializers import VulnerabilitySerializer
 class VulnerabilityApiViewSet(ModelViewSet):
     queryset = Vulnerability.objects.all()     
     serializer_class = VulnerabilitySerializer
+
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
 
     def connectApi(self, param = None):
         url = 'https://services.nvd.nist.gov/rest/json/cves/2.0'

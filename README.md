@@ -1,11 +1,25 @@
 # INFORMACIÓN: PRUEBA TÉCNICA PYTHON DJANGO REST FRAMEWORK
 
 ## Rutas API:
+- localhost:8000/api/get-token (POST) **Obtener el token necesario para poder acceder a los otros endpoints de la aplicación. Es necesario colocar el username y passwor del usuario. Este token será utilizado por medio de un Header Authorization con el valor "Token {token}"**
+**Response**
+```
+HTTP 200 OK
+Allow: POST
+Content-Type: application/json
+Vary: Accept
+
+{
+  "token": "a616c79fe450fb47d2b7400295bc56e0bf83c311"
+}
+```
+
+
 - localhost:8000/api/vulnearbilities (GET) **Obtener las vulnerabilidades sumarizadas desde la API sin incluir las que ya están registradas.**
 **Response**
 ```
 HTTP 200 OK
-Allow: GET, POST, HEAD, OPTIONS
+Allow: GET
 Content-Type: application/json
 Vary: Accept
 
@@ -33,7 +47,7 @@ Vary: Accept
 **Response**
 ```
 HTTP 201 Created
-Allow: GET, POST, HEAD, OPTIONS
+Allow: POST
 Content-Type: application/json
 Vary: Accept
 
@@ -47,7 +61,7 @@ Vary: Accept
 **Response**
 ```
 HTTP 200 OK
-Allow: GET, HEAD, OPTIONS
+Allow: GET
 Content-Type: application/json
 Vary: Accept
 
